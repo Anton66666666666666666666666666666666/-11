@@ -1,0 +1,12 @@
+solutions = []
+
+for b in range(1, 11):
+    for k in range(1, 21):
+        t = 200 - 20 * b - 10 * k
+        if t >= 0:
+            if b + k + t >= 3:
+                solutions.append((b, k, t))
+
+
+for b, k, t in solutions:
+    print(f'Быки: {b}, Коровы: {k}, Телята: {t}')
