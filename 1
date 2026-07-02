@@ -1,0 +1,7 @@
+for n in range(0, 13):
+    for k in range(0, 13):
+        remaining_days = 365 - 28 * n - 30 * k
+        if remaining_days >= 0 and remaining_days % 31 == 0:
+            m = remaining_days // 31
+            if m >= 0:
+                print(f'n = {n}, k = {k}, m = {m}')
