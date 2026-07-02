@@ -1,0 +1,38 @@
+number = input('Введите число: ').strip()
+
+digits = list(map(int, number))
+
+
+count_threes = digits.count(3)
+
+
+last_digit = digits[-1]
+count_last_digit = digits.count(last_digit)
+
+
+even_digits = [d for d in digits if d % 2 == 0]
+count_even = len(even_digits)
+
+
+sum_greater_five = sum(d for d in digits if d > 5)
+
+
+digits_gt_seven = [d for d in digits if d > 7]
+if len(digits_gt_seven) == 0:
+    product_gt_seven = 1
+else:
+    product_gt_seven = 1
+    for d in digits_gt_seven:
+        product_gt_seven *= d
+
+
+count_zero = digits.count(0)
+count_five = digits.count(5)
+total_zero_five = count_zero + count_five
+
+print('Количество цифр 3:' , count_threes)
+print('Количество последней цифры в числе:' , count_last_digit)
+print('Количество  чётных чисел: ' , count_even)
+print('Количетсво чисел больше 5: ' , sum_greater_five)
+print('Произведение цифр, больше 7:' , product_gt_seven)
+print('Количество цифр 0 и/или 5:' , total_zero_five)
